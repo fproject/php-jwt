@@ -144,7 +144,7 @@ class JWK
 
         $rsaPublicKey = "-----BEGIN PUBLIC KEY-----\r\n" .
             \chunk_split(\base64_encode($rsaPublicKey), 64) .
-            '-----END PUBLIC KEY-----';
+            "\n-----END PUBLIC KEY-----";
 
         return $rsaPublicKey;
     }
